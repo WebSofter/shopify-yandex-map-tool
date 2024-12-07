@@ -1,0 +1,33 @@
+# Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
+
+client_id = "1a5b94c5c71440a0c1bee30b24684c0e"
+application_url = "https://employed-dubai-blair-resolution.trycloudflare.com"
+embedded = true
+name = "yandex-map-tool"
+handle = "yandex-map-tool"
+
+[webhooks]
+api_version = "2024-10"
+
+  [[webhooks.subscriptions]]
+  topics = [ "app/uninstalled" ]
+  uri = "/webhooks/app/uninstalled"
+
+[access_scopes]
+# Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
+scopes = "write_products"
+
+[auth]
+redirect_urls = [
+  "https://employed-dubai-blair-resolution.trycloudflare.com/auth/callback",
+  "https://employed-dubai-blair-resolution.trycloudflare.com/auth/shopify/callback",
+  "https://employed-dubai-blair-resolution.trycloudflare.com/api/auth/callback"
+]
+
+[pos]
+embedded = false
+
+[build]
+dev_store_url = "wsofter.myshopify.com"
+automatically_update_urls_on_dev = true
+include_config_on_deploy = true
